@@ -18,6 +18,7 @@ body {
   background-repeat: no-repeat;
 
   font-family: "Manrope", sans-serif;
+  color: hsl(225, 20%, 60%);
 
   font-size: 16px;
 }
@@ -41,11 +42,11 @@ body {
 .header-primary-text {
   font-size: 1.68em;
   margin-bottom: 10px;
+  color: black;
 }
 
 .header-sub-text {
   font-size: .9em;
-  color: hsl(225, 20%, 60%);
   font-weight: 600;
 }
 
@@ -60,6 +61,9 @@ body {
   padding: 30px;
 }
 
+
+
+/* MAIN TOP */
 .main-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -73,7 +77,6 @@ body {
 
 .page-views {
   grid-area: page-views;
-  color: hsl(225, 20%, 60%);
   font-size: .9em;
   letter-spacing: 1.5px;
 
@@ -87,7 +90,6 @@ body {
 
 .pricing {
   grid-area: pricing;
-  color: hsl(225, 20%, 60%);
   position: relative;
 }
 
@@ -122,7 +124,6 @@ body {
 
 .billing-type span {
   margin: 0 10px;
-  color: hsl(225, 20%, 60%);
   font-size: .8em;
 }
 
@@ -175,7 +176,6 @@ body {
 }
 
 
-
 /* TOGGLE BUTTON */
 .toggle-container {
   position: relative;
@@ -223,9 +223,48 @@ body {
   border-radius: 50%;
 }
 
-
 input:checked + .toggle:before {
   transform: translate(23px, -50%);
+}
+
+
+
+/* MAIN BOTTOM */
+.main-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-top: 20px;
+
+  border-top: 1px solid hsl(223, 50%, 87%);
+}
+
+
+.features ul {
+  list-style: none;
+  font-size: 0.8em;
+}
+
+.features li {
+  margin: 5px 0;
+}
+
+.list-text {
+  margin: 5px;
+}
+
+.start-btn button {
+  padding: 7px 27px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+
+  background-color: hsl(227, 35%, 25%);
+  color: white;
+
+  cursor: pointer;
 }
 
 
@@ -243,12 +282,17 @@ input:checked + .toggle:before {
   input:hover + .toggle {
     background-color: hsl(174, 86%, 35%);
   }
+
+  .start-btn button:hover {
+    background-color: hsl(227, 35%, 35%);
+  }
 }
 
 
 @media only screen and (max-width: 500px) {
   .main-container {
     width: 90%;
+    margin-bottom: 20px;
   }
 
   .main-top {
@@ -269,5 +313,15 @@ input:checked + .toggle:before {
 
   .page-views {
     justify-content: center;
+  }
+
+  .main-bottom {
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .start-btn {
+    margin-top: 15px;
   }
 }
