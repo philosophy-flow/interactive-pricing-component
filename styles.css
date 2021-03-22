@@ -128,6 +128,16 @@ body {
   font-size: .8em;
 }
 
+#discount {
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  margin: 0;
+  margin-top: 1px;
+  font-size: .7em;
+  border-radius: 50px;
+  padding: 2px 5px;
+}
+
 
 /* CUSTOM SLIDER */
 .slider {
@@ -328,6 +338,11 @@ input:checked + .toggle:before {
 
   .pricing {
     margin: 10px 0;
+  }
+
+  .billing-type span {
+    margin: 0 10px;
+    font-size: .71em;
   }
 
   .main-bottom {
