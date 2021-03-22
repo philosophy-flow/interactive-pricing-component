@@ -301,6 +301,10 @@ input:checked + .toggle:before {
 
 
 @media only screen and (max-width: 500px) {
+  body {
+    background-image: none;
+  }
+
   .header-primary-text {
     font-size: 1.1em;
   }
@@ -308,8 +312,6 @@ input:checked + .toggle:before {
   .header-sub-text {
     padding: 0 60px;
   }
-
-
 
   .main-container {
     width: 90%;
