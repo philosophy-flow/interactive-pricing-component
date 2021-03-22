@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Interactive pricing component</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-primary-text">Simple, traffic-based pricing</h1>
+    <h4 class="header-sub-text">
+      Sign-up for our 30-day trial. No credit card required.
+    </h4>
+  </header>
+
+  <main class="main-container">
+    <div class="main-top">
+      <div class="page-views">
+        <p>100K PAGEVIEWS</p>
+      </div>
+      <div class="pricing">
+        <p>
+          <span class="price" id="price">$16.00</span>
+           <span class="month">/ month</span>
+         </p>
+      </div>
+      <div class="bar">
+        <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+      </div>
+
+      <div class="billing-type">
+        <span>Monthly Billing</span>
+
+        <div class="toggle-container">
+          <input type="checkbox">
+          <div class="toggle round"></div>
+        </div>
+
+        <span>Yearly Billing</span>
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>

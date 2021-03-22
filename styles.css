@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsl(230, 100%, 99%);
+  background-image: url('images/bg-pattern.svg');
+  background-size: 100vw 50vh;
+  background-repeat: no-repeat;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 16px;
+}
+
+
+
+/* HEADER */
+.header {
+  background-image: url('images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  margin: 30px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-primary-text {
+  font-size: 1.68em;
+  margin-bottom: 10px;
+}
+
+.header-sub-text {
+  font-size: .9em;
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+
+
+
+/* MAIN CONTENT */
+.main-container {
+  width: 500px;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.main-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "page-views pricing"
+    "bar bar"
+    "billing-type billing-type";
+}
+
+.page-views {
+  grid-area: page-views;
+  color: hsl(225, 20%, 60%);
+  font-size: .9em;
+  letter-spacing: 1.5px;
+
+  display: flex;
+  align-items: center;
+}
+
+.pricing, .bar, .billing-type {
+  padding: 10px;
+}
+
+.pricing {
+  grid-area: pricing;
+  color: hsl(225, 20%, 60%);
+  position: relative;
+}
+
+.price {
+  font-size: 2.2em;
+  color: black;
+}
+
+.month {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  font-weight: 600;
+  font-size: .95em;
+}
+
+.bar {
+  grid-area: bar;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.billing-type {
+  grid-area: billing-type;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billing-type span {
+  margin: 0 10px;
+  color: hsl(225, 20%, 60%);
+  font-size: .8em;
+}
+
+
+/* CUSTOM SLIDER */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+
+  cursor: pointer;
+  width: 100%;
+  height: 9px;
+  border-radius: 5px;
+  background-color: hsl(224, 65%, 95%);
+  outline: none;
+
+  background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 50%, hsl(224, 65%, 95%) 100%);
+}
+
+.slider::-webkit-slider-thumb {     /* Chrome, Opera, Safari, Edge */
+  -webkit-appearance: none;
+
+  width: 40px;
+  height: 40px;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url('images/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 8px 5px -1px hsla(174, 86%, 44%, 0.3);
+}
+
+.slider::-moz-range-thumb {       /* Firefox */
+  appearance: none;
+
+  width: 40px;
+  height: 40px;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url('images/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 8px 5px -1px hsla(174, 86%, 44%, 0.3);
+}
+
+
+
+/* TOGGLE BUTTON */
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle-container input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: hsl(223, 50%, 87%);
+  transition: 0.4s;
+  pointer-events: none;
+
+  border-radius: 34px;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+
+  height: 19px;
+  width: 19px;
+
+  background-color: #fff;
+  transition: 0.2s;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+
+input:checked + .toggle:before {
+  transform: translate(23px, -50%);
+}
+
+
+
+/* HOVER FOR NON MOBILE DEVICES */
+@media only screen and (min-width: 500px) {
+  .slider:hover::-webkit-slider-thumb {
+    background-color: hsl(174, 86%, 35%);
+  }
+
+  .slider:hover::-moz-range-thumb {
+    background-color: hsl(174, 86%, 35%);
+  }
+
+  input:hover + .toggle {
+    background-color: hsl(174, 86%, 35%);
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .main-container {
+    width: 90%;
+  }
+
+  .main-top {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "page-views"
+      "bar"
+      "pricing"
+      "billing-type";
+
+    text-align: center;
+  }
+
+  .pricing, .bar, .billing-type {
+    padding: 0px;
+  }
+
+  .page-views {
+    justify-content: center;
+  }
+}
