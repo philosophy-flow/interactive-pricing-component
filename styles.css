@@ -55,10 +55,11 @@ body {
 /* MAIN CONTENT */
 .main-container {
   width: 500px;
-  border: 1px solid red;
   background-color: white;
   border-radius: 10px;
   padding: 30px;
+
+  box-shadow: 0px 5px 30px 5px hsl(225, 20%, 90%);
 }
 
 
@@ -290,6 +291,16 @@ input:checked + .toggle:before {
 
 
 @media only screen and (max-width: 500px) {
+  .header-primary-text {
+    font-size: 1.1em;
+  }
+
+  .header-sub-text {
+    padding: 0 60px;
+  }
+
+
+
   .main-container {
     width: 90%;
     margin-bottom: 20px;
@@ -313,6 +324,10 @@ input:checked + .toggle:before {
 
   .page-views {
     justify-content: center;
+  }
+
+  .pricing {
+    margin: 10px 0;
   }
 
   .main-bottom {
