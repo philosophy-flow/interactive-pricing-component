@@ -355,3 +355,10 @@ input:checked + .toggle:before {
     margin-top: 15px;
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .billing-type span {
+    font-size: .61em;
+    margin: 3px;
+  }
+}
